@@ -1,4 +1,4 @@
-
+//Leetcode
 public class strCapSpacez {
     public static void main(String[] args) {
         String ss = "icodeinpython";
