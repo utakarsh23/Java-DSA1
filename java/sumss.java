@@ -3,7 +3,7 @@ public class sumss {
     public static void main(String[] args) {
         int sum = sumss();
         System.out.println(sum);
-        
+
     }
         static int sumss() {
             Scanner input = new Scanner(System.in);
@@ -17,4 +17,5 @@ public class sumss {
         //     return "Hello laps";
         // }
     }
+    
     

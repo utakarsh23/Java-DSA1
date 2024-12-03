@@ -1,6 +1,6 @@
-class Student {
+class StudentsN {
     public String name;
-    Student(String name) {
+    StudentsN(String name) {
         this.name = name;
     }
     @Override
@@ -10,8 +10,8 @@ class Student {
 }
 public class app {
     public static void main(String[] args) {
-        Student[] arr = new Student[] {new Student("Shaurya"), new Student("Dhruv"), new Student("Ayush"), new Student("Yashika"), new Student("Sidharth")};
-        for(Student m:arr){    
+        StudentsN[] arr = new StudentsN[] {new StudentsN("Shaurya"), new StudentsN("Dhruv"), new StudentsN("Ayush"), new StudentsN("Yashika"), new StudentsN("Sidharth")};
+        for(StudentsN m:arr){
             System.out.println(m);
         }
     }
