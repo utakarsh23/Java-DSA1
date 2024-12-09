@@ -9,8 +9,8 @@
 //this won't work with duplicate values
 public class LeetCodeRotatedArrayDuplicates {
     public static void main(String[] args) {
-        int[] arr = {1, 5, 8, 9, 0};
-        int target = 0;
+        int[] arr = {7,2,5,10,8};
+        int target = 2;
         System.out.println(search(arr, target));
     }
 
