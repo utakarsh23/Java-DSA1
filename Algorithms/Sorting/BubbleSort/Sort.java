@@ -9,15 +9,15 @@ public class Sort {
         System.out.println(Arrays.toString(arrr));
     }
     //main
-    static void bubbleSort(int[] arr) {
+    static void bubbleSort(int[] nums) {
         boolean swapped;
-        for (int i = 0; i < arr.length; i++) {
+        for (int i = 0; i < nums.length; i++) {
             swapped = false;
-            for (int j = 1; j < arr.length-i; j++) {
-                if(arr[j] < arr[j-1]) {
-                    int temp = arr[j];
-                    arr[j] = arr[j-1];
-                    arr[j-1] = temp;
+            for (int j = 1; j < nums.length-i; j++) {
+                if(nums[j] < nums[j-1]) {
+                    int temp = nums[j];
+                    nums[j] = nums[j-1];
+                    nums[j-1] = temp;
                     swapped = true;
                 }
             }
