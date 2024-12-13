@@ -1,4 +1,4 @@
-package Sorting.CycleSort;
+package LeetCode;
 //https://leetcode.com/problems/first-missing-positive/
 
 public class FirstmissingPositive {
