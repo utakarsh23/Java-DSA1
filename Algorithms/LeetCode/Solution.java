@@ -7,6 +7,7 @@ class Solutionsss {
         int[] arr = {1,1,1,1,1};
         System.out.println(Arrays.toString((runningSum(arr))));
     }
+    //https://leetcode.com/problems/build-array-from-permutation/description/
     static int[] buildArray(int[] nums) {
         int[] arr = new int[nums.length];
         for(int i = 0; i< nums.length; i++) {
