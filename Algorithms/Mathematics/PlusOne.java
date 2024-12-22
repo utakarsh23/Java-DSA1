@@ -19,8 +19,10 @@ public class PlusOne {
             if(digits.length-1-i == -1) {
                 return arr;
             }
-            arr[digits.length-1-i] = 1;
-            arr[digits.length-i] = 0;
+            if (arr[digits.length-1-i] != 9) {
+                arr[digits.length - 1 - i] = 1;
+                arr[digits.length - i] = 0;
+            }
             i++;
         }
         digits[digits.length-1] = digits[digits.length-1]+1;
