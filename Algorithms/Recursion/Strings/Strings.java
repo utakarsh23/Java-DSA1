@@ -2,7 +2,7 @@ package Recursion.Strings;
 
 public class Strings {
     public static void main(String[] args) {
-        stringSkip("", "baccdah");
+        System.out.println(stringSkipReturn("baccdah"));
     }
     static void stringSkip(String p, String up) {
         if(up.isEmpty()) {
@@ -25,7 +25,7 @@ public class Strings {
         if(ch == 'a') {
             return stringSkipReturn(up.substring(1));
         } else {
-            return stringSkipReturn(up.substring(1));
+            return ch + stringSkipReturn(up.substring(1));
         }
     }
 }
