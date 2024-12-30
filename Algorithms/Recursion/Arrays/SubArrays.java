@@ -5,7 +5,7 @@ import java.util.List;
 
 public class SubArrays {
     public static void main(String[] args) {
-        int[] adr = {1, 2, 3};
+        int[] adr = {1, 2, 3, 4};
         System.out.println(subseq(adr));
     }
     static List<List<Integer>> subseq(int[] arr) {
