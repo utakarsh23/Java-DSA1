@@ -4,21 +4,21 @@ import java.util.Arrays;
 
 public class Sort1 {
     public static void main(String[] args) {
-        int[] arr = {5, 4, 3, 2, 1};
+        int[] arr = {5, 4, 3, 0, 3, 2, 1};
 //        System.out.println(Arrays.toString(mergeSort(arr, 0, args.length/2, args.length)));
-        mergeSort(arr, 0, arr.length);
-        System.out.println(Arrays.toString(arr));
+        int[] ass = mergeSort(arr, 0, arr.length);
+        System.out.println(Arrays.toString(ass));
     }
 
-    //m1 - creating new object
-    static void mergeSort(int[] arr, int start, int end) {
+    static int[] mergeSort(int[] arr, int start, int end) {
         if(end - start == 1) {
-            return;
+            return null;
         }
         int mid = (start+end)/2;
         mergeSort(arr, start, mid);
         mergeSort(arr, mid, end);
         merge(arr, start, mid, end);
+        return arr;
     }
 
 
