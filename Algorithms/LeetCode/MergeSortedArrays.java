@@ -9,7 +9,7 @@ public class MergeSortedArrays {
         int m = 3;
         int[] nums2 = {2,5,6};
         int n = 3;
-        merge(nums1, m, nums2, n);
+        merge(nums1, 3, nums2, 3);
         System.out.println(Arrays.toString(nums1));
     }
     static void merge(int[] nums1, int m, int[] nums2, int n) {
@@ -28,4 +28,26 @@ public class MergeSortedArrays {
             right--;
         }
     }
+    //m2
+//    static void merge1(int[] nums1, int m, int[] nums2, int n) {
+//        int s;
+//        if(nums1.length > n) s = nums1.length;
+//        else s = n;
+//        int[] arr = new int[s];
+//        int k = 0;
+//        if(nums1.length > n) {
+//            for (int i = 0; i < n; i++) {
+//                arr[k] = nums1[i];
+//                arr[nums1.length-1-i] = nums2[n-i-1];
+//                k++;
+//            }
+//        } else {
+//            k = 0;
+//            for (int i = 0; i < nums1.length; i++) {
+//                arr[k] = nums1[i];
+//                arr[nums1.length-1-i] = nums1[n-i-1];
+//                k++;
+//            }
+//        }
+//    }
 }
