@@ -5,7 +5,7 @@ import java.util.Set;
 
 public class LongestNiceSubstring {
     public static void main(String[] args) {
-        String s = "YazaAay";
+        String s = "YazaA";
         System.out.println(longestNiceSubstring(s));
     }
     static String longestNiceSubstring(String s) {
