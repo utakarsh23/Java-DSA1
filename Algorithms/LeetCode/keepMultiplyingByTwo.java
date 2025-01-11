@@ -9,7 +9,7 @@ public class keepMultiplyingByTwo {
         for(int i = 0; i< nums.length; i++) {
             if(nums[i] == original) {
                 original *=2;
-                i = -1;
+                i = -1; // as after going up it'll start from 0, if taken 0 then 1(will cause an error)
             }
         }
         return original;

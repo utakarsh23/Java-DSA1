@@ -7,6 +7,7 @@ public class PerfectNumber {
         System.out.println(checkPerfectNumber(2));
     }
     static boolean checkPerfectNumber(int num) {
+        if(num < 2) return false;
         int sum = 1;
         for (int j = 2; j < Math.sqrt(num); j++) {
             if(num % j == 0) {

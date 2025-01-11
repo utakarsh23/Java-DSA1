@@ -5,18 +5,21 @@ import java.util.Set;
 
 public class LongestNiceSubstring {
     public static void main(String[] args) {
-        String s = "YazaA";
+        String s = "YaBbaAy";
         System.out.println(longestNiceSubstring(s));
     }
     static String longestNiceSubstring(String s) {
         if(s.length() < 2) return "";
-        char[] arr = s.toCharArray();
+//        char[] arr = s.toCharArray();
         Set<Character> set = new HashSet<>();
-        for(char c : arr) {
-            set.add(c);
+//        for(char c : arr) {
+//            set.add(c);
+//        }
+        for (int i = 0; i < s.length(); i++) {
+            set.add(s.charAt(i));
         }
-        for (int i = 0; i < arr.length; i++) {
-            char c = arr[i];
+        for (int i = 0; i < s.length(); i++) {
+            char c = s.charAt(i);
             if(set.contains(Character.toUpperCase(c)) && set.contains(Character.toLowerCase(c))) {
                 continue;
             }
