@@ -9,6 +9,7 @@ public class MazeWithObstacle {
                 {true, true, true, true}
         };
         PathsRestrictions("", board, 0, 0);
+
     }
     static void PathsRestrictions(String p, boolean maze[][], int row, int col) {
         if(row == maze.length-1 && col == maze[0].length-1) {
