@@ -6,6 +6,7 @@
       <sourceFolder url="file://$MODULE_DIR$/Linear Search" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Algorithms" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/CP" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/OOPS" isTestSource="false" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
