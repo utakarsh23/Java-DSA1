@@ -2,7 +2,7 @@ package LeetCode;
 
 public class Sqrt {
     public static void main(String[] args) {
-        System.out.println(sqrt1(49));
+        System.out.println(sqrt(25));
     }
     static double sqrt(double x) {
         double low = 0;
