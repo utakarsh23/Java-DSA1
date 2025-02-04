@@ -32,4 +32,40 @@ public class SortEVenANdOddIndicesIndependently {
         }
         return nums;
     }
+
+
+
+    static int[] sortEvenOdd1(int[] nums) {
+        int[] odd=new int[nums.length/2];
+        int[] even=new int[(nums.length+1)/2];
+        int[] ans=new int[nums.length];
+
+        int e=0,o=0;
+        for(int i=0;i<nums.length;i++){
+            if(i%2==0){
+                even[e++]=nums[i];
+            }else{
+                odd[o++]=nums[i];
+            }
+        }
+
+        Arrays.sort(even);
+        Arrays.sort(odd);
+
+        for(int i=0;i<odd.length/2;i++){
+            int temp=odd[i];
+            odd[i]=odd[(odd.length -1)-i];
+            odd[(odd.length -1)-i]=temp;
+        }
+
+        e=0;o=0;
+        for(int i=0;i<nums.length;i++){
+            if(i%2==0){
+                ans[i]=even[e++];
+            }else{
+                ans[i]=odd[o++];
+            }
+        }
+        return ans;
+    }
 }
