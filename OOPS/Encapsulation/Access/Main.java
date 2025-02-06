@@ -19,5 +19,7 @@ public class Main {
         System.out.println(obj.getAge());
 
         String s = obj.name; ///  here it can be accessed as the directory is same -------(2)
+
+        int dd = obj.dob; ///can be accesed through here even if it's protected -------(3)
     }
 }

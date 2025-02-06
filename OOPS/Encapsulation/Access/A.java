@@ -9,6 +9,9 @@ public class A {
     public int[] arr; /// can be acccesed from anywhere any place as it's public,(same as getters and setters)
 
 
+    protected int dob; ///can be accesed from within the directory(package) but not from outside, same as default ----(3)
+
+
     public int getAge() { /// but this is public and can be accessed anywhere in the directory ------(1)
         return age;
     }
@@ -21,5 +24,6 @@ public class A {
         this.age = age;
         this.name = name;
         this.arr = new int[age];
+        this.dob = age+2;
     }
 }

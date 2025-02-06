@@ -6,7 +6,7 @@ import java.util.List;
 public class BackspaceStringCompare {
     public static void main(String[] args) {
         String s = "ab#cde#f##xy", t = "ab#cde#fi###xy";
-        System.out.println(backspaceCompare(s, t));
+        System.out.println(backSpaceCompare(s, t));
     }
 
 //    static boolean backspaceCompare(String s, String t) {
@@ -85,5 +85,38 @@ public class BackspaceStringCompare {
             }
         }
         return i == -1 && j == -1;
+    }
+
+    static boolean backSpaceCompare(String s, String t) {
+        int i = 0;
+        List<Character> ch = new ArrayList<>();
+        List<Character> ch1 = new ArrayList<>();
+        while (i < s.length()) {
+            if(s.charAt(i) == '#') {
+                ch.removeLast();
+            } else {
+                ch.add(s.charAt(i));
+            }
+            i++;
+        }
+
+        i = 0;
+        while (i < t.length()) {
+            if(t.charAt(i) == '#') {
+                ch1.removeLast();
+            } else {
+                ch1.add(t.charAt(i));
+            }
+            i++;
+        }
+//        String sh = "";
+//        String th = "";
+//        for (int j = 0; j < ch.size(); j++) {
+//            sh = sh+s.charAt(j);
+//        }
+//        for (int j = 0; j < ch1.size(); j++) {
+//            th = th+t.charAt(j);
+//        }
+        return ch.equals(ch1);
     }
 }
