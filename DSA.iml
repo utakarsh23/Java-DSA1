@@ -7,6 +7,7 @@
       <sourceFolder url="file://$MODULE_DIR$/Algorithms" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/CP" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/OOPS" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Collections" isTestSource="false" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
