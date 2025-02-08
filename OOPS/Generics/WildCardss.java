@@ -2,14 +2,14 @@ package Generics;
 
 import java.util.Arrays;
 
-public class CustomGenericArrayList<T> {
+public class WildCardss<T extends Number> {
 
     private Object[] data;
     private static int DEFAULT_SIZE = 10;
     private int size = 0;
 
 
-    public CustomGenericArrayList() {
+    public WildCardss() {
         this.data = new Object[DEFAULT_SIZE];
     }
 
@@ -60,7 +60,7 @@ public class CustomGenericArrayList<T> {
     }
 
     public static void main(String[] args) {
-        CustomGenericArrayList<Integer> cus = new CustomGenericArrayList<>();
+        WildCardss<Integer> cus = new WildCardss<>();
         cus.add(78);
         cus.add(78);
         cus.add(78);
