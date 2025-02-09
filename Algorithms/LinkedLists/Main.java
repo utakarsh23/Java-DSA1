@@ -2,15 +2,15 @@ package LinkedLists;
 
 public class Main {
     public static void main(String[] args) {
-//        CustomLinkedList li = new CustomLinkedList();
-//        li.insertFirst(3);
-//        li.insertFirst(4);
-//        li.insertFirst(5);
-//        li.insertFirst(6);
-//        li.insertLast(18);
-//        li.insert(200, 3);
-//
-//        li.display();
+        CustomLinkedList li = new CustomLinkedList();
+        li.insertFirst(3);
+        li.insertFirst(4);
+        li.insertFirst(5);
+        li.insertFirst(6);
+        li.insertLast(18);
+        li.insert(200, 3);
+        li.insertRecursion(7, 3);
+        li.display();
 //
 //        System.out.println(li.deleteFirst());
 //
@@ -39,15 +39,15 @@ public class Main {
 //        doublyLL.insert(36, 35);
 //        doublyLL.display();
 
-        CLL li = new CLL();
-        li.insert(45);
-        li.insert(47);
-        li.insert(56);
-        li.insert(54);
-        li.insert(57);
-        li.display();
-        li.delete(45);
-        li.display();
+//        CLL li = new CLL();
+//        li.insert(45);
+//        li.insert(47);
+//        li.insert(56);
+//        li.insert(54);
+//        li.insert(57);
+//        li.display();
+//        li.delete(45);
+//        li.display();
 
     }
 }

@@ -49,6 +49,21 @@ public class CustomLinkedList {
         size++;
     }
 
+    //insert using recursion
+    public void insertRecursion(int val, int index) {
+        head = insertRecursion(val, index, head);
+    }
+
+    private Node insertRecursion(int val, int index, Node node) {
+        if(index == 0) {
+            Node temp = new Node(val, node);
+            size++;
+            return temp;
+        }
+        node.next = insertRecursion(val, --index, node.next);
+        return node;
+    }
+
     public int deleteFirst() {
         int val = head.value;
         head = head.next;
