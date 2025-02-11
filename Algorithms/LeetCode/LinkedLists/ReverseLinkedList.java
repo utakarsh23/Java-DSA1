@@ -2,10 +2,10 @@ package LeetCode.LinkedLists;
 
 public class ReverseLinkedList {
     public static void main(String[] args) {
-        ListNode head = new ListNode(1, new ListNode(2, new ListNode(3, new ListNode(4, new ListNode(5)))));
+        ListNode head = new ListNode(100, new ListNode(2, new ListNode(8, new ListNode(4, new ListNode(5)))));
         
         ReverseLinkedList obj = new ReverseLinkedList();
-        ListNode reversedHead = obj.reverseList1(head); // Implement this method yourself
+        ListNode reversedHead = obj.reverseList2(head); // Implement this method yourself
 
         printList(reversedHead);
     }
@@ -57,6 +57,24 @@ public class ReverseLinkedList {
         head.next = null;
 
         return newHead;
+    }
+
+
+
+    public ListNode reverseList2(ListNode head) {
+        // Implement your logic here
+        if (head == null || head.next == null) return head;
+        ListNode previous = null;
+        ListNode next = head.next;
+        ListNode present = head;
+        while (next != null) {
+            present.next = previous;
+            previous = present;
+            present  = next;
+            next = next.next;
+        }
+        present.next = previous;
+        return present;
     }
 
     public static void printList(ListNode head) {
