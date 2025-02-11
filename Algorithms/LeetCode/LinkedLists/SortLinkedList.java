@@ -15,8 +15,14 @@ public class SortLinkedList {
             return head;
         }
 
-        ListNode mid = middleNode1(head);
-        mid.next = null;
+        ListNode  slow = head, fast = head.next;
+        while (fast != null && fast.next != null) {
+            fast = fast.next.next;
+            slow = slow.next;
+        }
+
+        ListNode mid = slow.next;
+        slow.next = null;
         ListNode left = sortList(head);
         ListNode right = sortList(mid);
 
