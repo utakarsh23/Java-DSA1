@@ -61,7 +61,25 @@ public class ReverseLinkedList {
 
 
 
+    //my implementation
     public ListNode reverseList2(ListNode head) {
+        // Implement your logic here
+        if (head == null || head.next == null) return head;
+        ListNode previous = null;
+        ListNode next = head.next;
+        ListNode present = head;
+        while (next != null) {
+            present.next = previous;
+            previous = present;
+            present  = next;
+            next = next.next;
+        }
+        present.next = previous;
+        return present;
+    }
+
+    //KK implementation
+    public ListNode reverseList3(ListNode head) {
         // Implement your logic here
         if (head == null || head.next == null) return head;
         ListNode previous = null;
