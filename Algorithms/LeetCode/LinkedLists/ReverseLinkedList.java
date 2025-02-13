@@ -5,7 +5,7 @@ public class ReverseLinkedList {
         ListNode head = new ListNode(100, new ListNode(2, new ListNode(8, new ListNode(4, new ListNode(5)))));
         
         ReverseLinkedList obj = new ReverseLinkedList();
-        ListNode reversedHead = obj.reverseList2(head); // Implement this method yourself
+        ListNode reversedHead = obj.reverseList3(head); // Implement this method yourself
 
         printList(reversedHead);
     }
@@ -83,16 +83,18 @@ public class ReverseLinkedList {
         // Implement your logic here
         if (head == null || head.next == null) return head;
         ListNode previous = null;
-        ListNode next = head.next;
         ListNode present = head;
-        while (next != null) {
+        ListNode next = present.next;
+
+        while (present != null) {
             present.next = previous;
             previous = present;
             present  = next;
-            next = next.next;
+            if(next != null) {
+                next = next.next;
+            }
         }
-        present.next = previous;
-        return present;
+        return previous;
     }
 
     public static void printList(ListNode head) {
