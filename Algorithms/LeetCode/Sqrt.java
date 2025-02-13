@@ -3,6 +3,7 @@ package LeetCode;
 public class Sqrt {
     public static void main(String[] args) {
         System.out.println(sqrt(25));
+//        System.out.println(2000000000%6);
     }
     static double sqrt(double x) {
         double low = 0;
