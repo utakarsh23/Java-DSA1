@@ -28,21 +28,49 @@ public class Main {
 //        for (int i = 0; i < 10; i++) {
 //            System.out.println(stack1.pop());
 //        }
+//
+//        CustomStacks qq = new DynamicStack();
+//        qq.push(45);
+//        qq.push(45);
+//        qq.push(45);
+//        qq.push(45);
+//        qq.push(45);
+//        qq.push(45);
+//        qq.push(45);
+//        qq.push(45);
+//        qq.push(45);
+//        qq.push(45);
+//        for (int i = 0; i < 10; i++) {
+//            System.out.println(qq.pop());
+//        }
+//
+//        CustomQueue que = new CustomQueue();
+//        que.insert(7);
+//        que.insert(9);
+//        que.insert(10);
+//        que.insert(13);
+//        que.insert(18);
+//
+//        que.display();
+//        que.remove();
+//        que.display();
 
-        CustomStacks qq = new DynamicStack();
-        qq.push(45);
-        qq.push(45);
-        qq.push(45);
-        qq.push(45);
-        qq.push(45);
-        qq.push(45);
-        qq.push(45);
-        qq.push(45);
-        qq.push(45);
-        qq.push(45);
-        for (int i = 0; i < 10; i++) {
-            System.out.println(qq.pop());
-        }
 
+        CircularQueue que = new CircularQueue();
+        que.insert(7);
+        que.insert(9);
+        que.insert(10);
+        que.insert(13);
+        que.insert(18);
+        que.insert(20);
+        que.insert(22);
+//        que.insert(24);
+//        que.insert(26);
+//        que.insert(28);
+
+        que.display();
+        que.remove();
+//        que.insert(76);
+        que.display();
     }
 }
