@@ -9,6 +9,7 @@ public class BinaryToDecimal {
             node = node.next;
             count++;
         }
+
         int sum = 0;
         node = head;
         while (node != null) {
