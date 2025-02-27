@@ -1,46 +1,66 @@
 package LeetCode.LinkedLists;
 
+import java.util.ArrayList;
+import java.util.List;
+
 class MaximumTwinSumOfLL {
     public static void main(String[] args) {
-        ListNode head = new ListNode(1, new ListNode(2, new ListNode(3, new ListNode(4))));
-        System.out.println("Max Twin Sum: " + pairSum(head));
+        ListNode head = new ListNode(5, new ListNode(4, new ListNode(2, new ListNode(1))));
+        System.out.println("Max Twin Sum: " + pairSum1(head));
     }
 
+
+    //m1
     public static int pairSum(ListNode head) {
-        ListNode firstHalf = new ListNode(0);
-        ListNode fh = firstHalf;
-        ListNode dh = head;
-        ListNode node = head;
-        while (node != null && node.next != null) {
-            node = node.next.next;
-            fh.next = dh;
-            fh = fh.next;
-            dh = dh.next;
-        }
-        fh.next = null;
-        firstHalf = firstHalf.next;
-        int max = Integer.MIN_VALUE;
-        while(fh != null) {
-            head = head.next
-            fh = fh.next;
-        }
 
-    }
-    static ListNode middleNode1(ListNode head) {
-        ListNode  slow = head, fast = head;
+        ListNode fast = head;
+        ListNode slow = head;
         while (fast != null && fast.next != null) {
-            fast = fast.next.next;
             slow = slow.next;
+            fast = fast.next.next;
         }
-        return slow;
+        ListNode head1 = reverse(slow);
+        ListNode curr1 = head;
+        int max = Integer.MIN_VALUE;
+        while (head1 != null) {
+            int vals = curr1.val + head1.val;
+            max = Math.max(max, vals);
+            head1 = head1.next;
+            curr1 = curr1.next;
+        }
+        return max;
     }
 
-    public static void printList(ListNode head) {
-        ListNode current = head;
-        while (current != null) {
-            System.out.print(current.val + " -> ");
-            current = current.next;
+    public static ListNode reverse(ListNode head){
+        ListNode prev=null;
+        ListNode curr=head;
+        ListNode nextnode;
+        while(curr!=null){
+            nextnode=curr.next;
+            curr.next=prev;
+            prev=curr;
+            curr=nextnode;
+
         }
-        System.out.println("null");
+        return prev;
+    }
+
+    //m2
+    public static int pairSum1(ListNode head) {
+        List<Integer> li = new ArrayList<>();
+        ListNode temp = head;
+        while (temp != null) {
+            li.add(temp.val);
+            temp = temp.next;
+        }
+        int i = 0;
+        int j = li.size()-1;
+        int max = Integer.MIN_VALUE;
+        while(i < j) {
+            max = Math.max(max, li.get(i)+li.get(j));
+            i++;
+            j--;
+        }
+        return max;
     }
 }

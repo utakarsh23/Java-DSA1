@@ -2,10 +2,10 @@ package BinarySearch;//https://leetcode.com/problems/peak-index-in-a-mountain-ar
 
 public class LeetCodePeakIndex {
     public static void main(String[] args) {
-        int[] nums = {1,2,1,3,5,6,4};
-        System.out.println(peakIndexInMountainArrays(nums));
+        int[] nums = {0, 10, 5, 2};
+//        System.out.println(peakIndexInMountainArrays(nums));
         System.out.println(peakIndexInMountainArrayss(nums));
-        System.out.println(peakIndexInMountainArray(nums));
+//        System.out.println(peakIndexInMountainArray(nums));
 
     }
     static int peakIndexInMountainArrays(int[] nums) {
