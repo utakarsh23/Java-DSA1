@@ -34,15 +34,15 @@ public class TextEditor {
         }
     }
 
-    public int deleteText(int k) {
-
-    }
-
-    public String cursorLeft(int k) {
-
-    }
-
-    public String cursorRight(int k) {
-
-    }
+//    public int deleteText(int k) {
+//
+//    }
+//
+//    public String cursorLeft(int k) {
+//
+//    }
+//
+//    public String cursorRight(int k) {
+//
+//    }
 }
