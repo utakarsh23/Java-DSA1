@@ -3,7 +3,7 @@ package LeetCode;
 class CheckIfNumberIsASumOfPowersOfThree {
 
     public static void main(String[] args) {
-        System.out.println(checkPowersOfThree(10));
+        System.out.println(checkPowersOfThree(11));
     }
     static boolean checkPowersOfThree(int n) {
         while (n > 0) {
